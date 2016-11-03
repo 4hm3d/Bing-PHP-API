@@ -137,13 +137,4 @@ var_dump($search->getLinks()); // return the links only
 var_dump($search->getResults()); // return the results ( title & link )
 */
 
-$search = new bing_api("dork");
-$search->setDork('linux');// change dork to linux
-$search->setCount(50);// number of results on each page
-$search->setSubLinks(TRUE);// returns sublinks of the results if available
-
-$search->search(); // start the search & extract the data
-
-var_dump($search->getLinks()); // return the links only
-var_dump($search->getResults()); // return the results ( title & link )
  ?>
