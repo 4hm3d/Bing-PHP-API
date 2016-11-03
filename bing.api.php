@@ -1,6 +1,7 @@
 <?php
 /*
 Project name
+
 */
 
 class bing_api {
