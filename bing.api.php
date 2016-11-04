@@ -75,21 +75,28 @@ class bing_api {
     );
     $results = array();
     $a = 0;
-    foreach( $all_class as $class )
+    foreach( $all_class as $class )//b_attribution
     {
+      $description = iterator_to_array( $class->getElementsByTagName('p') );
       $class = iterator_to_array( $class->getElementsByTagName('a') );
+
+
       $results[$a]['main']['title'] = $class[0]->textContent;
+      $results[$a]['main']['description'] = $description[0]->textContent;
       $results[$a]['main']['url'] = $links[] = $class[0]->getAttribute('href');
       if ( $sub_links === TRUE )
       {
         for( $i=1; $i<count($class);$i++)
         {
           $results[$a]['sub']['title'] = $class[$i]->textContent;
+          $results[$a]['sub']['description'] = ( isset( $description[$i]->textContent ) ) ? $description[$i]->textContent : "";
           $results[$a]['sub']['url'] = $links[] = $class[$i]->getAttribute('href');
         }
       }
       $a+=1;
     }
+    var_dump( $results );
+    die();
     return $results;
   }
 
@@ -123,11 +130,8 @@ class bing_api {
 
 }
 
-/*
-Example:
-
 $search = new bing_api("help");
-$search->setDork('change dork');
+$search->setDork('apple');
 $search->setCount(50);// number of results on each page
 $search->setSubLinks(TRUE);// returns sublinks of the results if available
 
@@ -135,6 +139,6 @@ $search->search(); // start the search & extract the data
 
 var_dump($search->getLinks()); // return the links only
 var_dump($search->getResults()); // return the results ( title & link )
-*/
+
 
  ?>
