@@ -64,7 +64,7 @@ class bing_api {
   {
     self::$sub_links = $option;
   }
-  private function filter_results( $source, $sub_links=TRUE )
+  private function filter_results( $source = "", $sub_links=TRUE )
   {
     $dom = new DOMDocument;
     @$dom->loadHTML($source);
@@ -75,7 +75,7 @@ class bing_api {
     );
     $results = array();
     $a = 0;
-    foreach( $all_class as $class )//b_attribution
+    foreach( $all_class as $class )
     {
       $description = iterator_to_array( $class->getElementsByTagName('p') );
       $class = iterator_to_array( $class->getElementsByTagName('a') );
