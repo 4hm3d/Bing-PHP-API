@@ -1,6 +1,6 @@
 # Bing PHP API
 <h3>Example :</h3>
-[code]
+```
 $search = new bing_api("help");
 $search->setDork('apple');
 $search->setCount(50);// number of results on each page
@@ -10,9 +10,9 @@ $search->search(); // start the search & extract the data
 
 var_dump($search->getLinks()); // return the links only
 var_dump($search->getResults()); // return the results ( title & link )
-[/code]
+```
 <h3>Output, full results:</h3>
-[code]
+```
 [13]=>
 array(2) {
   ["main"]=>
@@ -34,9 +34,9 @@ array(2) {
     string(47) "https://en.wikipedia.org/wiki/Apple#Cultivation"
   }
 }
-[/code]
+```
 <h3>Output, links only</h3>
-[code]
+```
 array(71) {
   [0]=>
   string(21) "http://www.apple.com/"
@@ -67,4 +67,4 @@ array(71) {
   [13]=>
   string(33) "http://finance.yahoo.com/q?s=AAPL"
   [14]=>...
-[/code]
+```
