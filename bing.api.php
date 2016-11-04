@@ -95,12 +95,10 @@ class bing_api {
       }
       $a+=1;
     }
-    var_dump( $results );
-    die();
     return $results;
   }
 
-  private function main_curl( $dork, $page = 0, $count = 50, $timeout = 30 )
+  private function main_curl( $dork = "", $page = 0, $count = 50, $timeout = 30 )
   {
   	$ch = curl_init();
     $ch_options = array(
