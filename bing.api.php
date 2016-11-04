@@ -1,7 +1,6 @@
 <?php
 /*
-Project name
-
+Name: Bing Native PHP API
 */
 
 class bing_api {
@@ -14,7 +13,6 @@ class bing_api {
   private static $current_search;
   private static $full_results = array();
   private static $links = array();
-
 
   public function __construct( $dork = "" , $number_pages = 1 , $count = 50, $sub_links = TRUE, $timeout = 30 )
   {
@@ -80,7 +78,6 @@ class bing_api {
       $description = iterator_to_array( $class->getElementsByTagName('p') );
       $class = iterator_to_array( $class->getElementsByTagName('a') );
 
-
       $results[$a]['main']['title'] = $class[0]->textContent;
       $results[$a]['main']['description'] = $description[0]->textContent;
       $results[$a]['main']['url'] = $links[] = $class[0]->getAttribute('href');
@@ -124,8 +121,6 @@ class bing_api {
   	  return array(TRUE, $output );
   	}
   }
-
-
 }
 
 $search = new bing_api("help");
