@@ -80,14 +80,14 @@ class bing_api {
 
       $results[$a]['main']['title'] = $class[0]->textContent;
       $results[$a]['main']['description'] = $description[0]->textContent;
-      $results[$a]['main']['url'] = $links[] = $class[0]->getAttribute('href');
+      $results[$a]['main']['url'] = self::$links[] = $class[0]->getAttribute('href');
       if ( $sub_links === TRUE )
       {
         for( $i=1; $i<count($class);$i++)
         {
           $results[$a]['sub']['title'] = $class[$i]->textContent;
           $results[$a]['sub']['description'] = ( isset( $description[$i]->textContent ) ) ? $description[$i]->textContent : "";
-          $results[$a]['sub']['url'] = $links[] = $class[$i]->getAttribute('href');
+          $results[$a]['sub']['url'] = self::$links[] = $class[$i]->getAttribute('href');
         }
       }
       $a+=1;
