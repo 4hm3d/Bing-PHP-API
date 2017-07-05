@@ -1,5 +1,5 @@
 # Bing PHP API
-###Example :
+### Example :
 
 ```PHP
 $search = new bing_api("help");
@@ -37,7 +37,7 @@ array(2) {
 }
 ```
 
-###Output, links only
+### Output, links only
 
 ```
 array(71) {
