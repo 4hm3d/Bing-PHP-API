@@ -1,6 +1,6 @@
 # Bing PHP API
 <h3>Example :</h3>
-```PHP
+``````PHP
 $search = new bing_api("help");
 $search->setDork('apple');
 $search->setCount(50);// number of results on each page
@@ -11,7 +11,7 @@ $search->search(); // start the search & extract the data
 var_dump($search->getLinks()); // return the links only
 var_dump($search->getResults()); // return the results ( title & link )
 
-```
+
 ```
 [13]=>
 array(2) {
