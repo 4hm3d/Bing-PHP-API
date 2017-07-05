@@ -33,9 +33,9 @@ array(2) {
     string(47) "https://en.wikipedia.org/wiki/Apple#Cultivation"
   }
 }
-```
+
 <h3>Output, links only</h3>
-```
+
 array(71) {
   [0]=>
   string(21) "http://www.apple.com/"
