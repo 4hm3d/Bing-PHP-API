@@ -14,27 +14,61 @@ var_dump($search->getResults()); // return the results ( title & link )
 ```
 
 ```
-[13]=>
-array(2) {
-  ["main"]=>
-  array(3) {
-    ["title"]=>
-    string(17) "Apple - Wikipedia"
-    ["description"]=>
-    string(170) "The apple tree (Malus pumila, commonly and erroneously called Malus domestica) is a deciduous tree in the rose family best known for its sweet, pomaceous fruit, the apple"
-    ["url"]=>
-    string(35) "https://en.wikipedia.org/wiki/Apple"
+array(39) {
+  [0]=>
+  array(2) {
+    ["main"]=>
+    array(3) {
+      ["title"]=>
+      string(5) "Apple"
+      ["description"]=>
+      string(167) "Discover the innovative world of Apple and shop everything iPhone, iPad, Apple Watch, Mac, and Apple TV, plus explore accessories, entertainment, and expert device ..."
+      ["url"]=>
+      string(22) "https://www.apple.com/"
+    }
+    ["sub"]=>
+    array(3) {
+      ["title"]=>
+      string(6) "iTunes"
+      ["description"]=>
+      string(73) "iTunes. Your music, movies, and TV shows take center stage. iTunes is ΓÇª"
+      ["url"]=>
+      string(29) "https://www.apple.com/itunes/"
+    }
   }
-  ["sub"]=>
-  array(3) {
-    ["title"]=>
-    string(11) "Cultivation"
-    ["description"]=>
-    string(0) ""
-    ["url"]=>
-    string(47) "https://en.wikipedia.org/wiki/Apple#Cultivation"
+  [1]=>
+  array(1) {
+    ["main"]=>
+    array(3) {
+      ["title"]=>
+      string(34) "Fashion Fair - Apple Store - Apple"
+      ["description"]=>
+      string(89) "Apple Store Fashion Fair store hours, contact information, and weekly calendar of events."
+      ["url"]=>
+      string(41) "https://www.apple.com/retail/fashionfair/"
+    }
   }
-}
+  [2]=>
+  array(2) {
+    ["main"]=>
+    array(3) {
+      ["title"]=>
+      string(22) "Apple Inc. - Wikipedia"
+      ["description"]=>
+      string(166) "Apple Inc. is an American multinational technology company headquartered in Cupertino, California that designs, develops, and sells consumer electronics, computer ..."
+      ["url"]=>
+      string(40) "https://en.wikipedia.org/wiki/Apple_Inc."
+    }
+    ["sub"]=>
+    array(3) {
+      ["title"]=>
+      string(17) "Corporate affairs"
+      ["description"]=>
+      string(0) ""
+      ["url"]=>
+      string(58) "https://en.wikipedia.org/wiki/Apple_Inc.#Corporate_affairs"
+    }
+  }
 ```
 
 ### Output, links only
