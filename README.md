@@ -10,9 +10,8 @@ $search->search(); // start the search & extract the data
 
 var_dump($search->getLinks()); // return the links only
 var_dump($search->getResults()); // return the results ( title & link )
-```
-<h3>Output, full results:</h3>
-```
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 [13]=>
 array(2) {
   ["main"]=>
